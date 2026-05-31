@@ -1,683 +1,487 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<html class="light" lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ótica Plena | Sua Visão em Primeiro Lugar em Capim Grosso - BA</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Na Ótica Plena em Capim Grosso - BA, você encontra óculos de grau, óculos de sol e lentes de contato de alta qualidade. Exames avançados e atendimento personalizado.">
-    <meta name="keywords" content="otica plena, otica capim grosso, oculos de grau, oculos de sol, lentes de contato, exames de vista, armacoes premium">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://oticaplena.vercel.app">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://oticaplena.vercel.app">
-    <meta property="og:title" content="Ótica Plena | Sua Visão em Primeiro Lugar">
-    <meta property="og:description" content="Encontre os melhores óculos de grau, óculos de sol e lentes de contato na Ótica Plena em Capim Grosso - BA.">
-    <meta property="og:image" content="assets/glasses.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://oticaplena.vercel.app">
-    <meta property="twitter:title" content="Ótica Plena | Sua Visão em Primeiro Lugar">
-    <meta property="twitter:description" content="Encontre os melhores óculos de grau, óculos de sol e lentes de contato na Ótica Plena em Capim Grosso - BA.">
-    <meta property="twitter:image" content="assets/glasses.png">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Ótica Plena | Excelência em Saúde Visual</title>
     
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Material Symbols Outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/logo - otica plena.png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#261900",
+                    "on-secondary-container": "#785a1a",
+                    "outline": "#717974",
+                    "surface-bright": "#fcf9f8",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#c9c6c2",
+                    "background": "#fcf9f8",
+                    "on-tertiary-container": "#8e8d89",
+                    "on-primary-fixed": "#002117",
+                    "secondary-fixed-dim": "#e9c176",
+                    "primary-fixed-dim": "#a9cfbe",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-container-high": "#eae7e7",
+                    "surface-variant": "#e5e2e1",
+                    "tertiary-fixed": "#e5e2dd",
+                    "surface-tint": "#426558",
+                    "on-tertiary-fixed-variant": "#474743",
+                    "secondary-container": "#fed488",
+                    "primary": "#00150e",
+                    "on-background": "#1c1b1b",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-dim": "#dcd9d9",
+                    "on-surface": "#1c1b1b",
+                    "tertiary-container": "#262623",
+                    "secondary-fixed": "#ffdea5",
+                    "inverse-primary": "#a9cfbe",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "inverse-surface": "#313030",
+                    "secondary": "#775a19",
+                    "surface-container": "#f0eded",
+                    "on-tertiary-fixed": "#1c1c19",
+                    "on-primary-container": "#719586",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#c4ebda",
+                    "surface": "#fcf9f8",
+                    "primary-container": "#062c21",
+                    "on-surface-variant": "#414845",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f6f3f2",
+                    "outline-variant": "#c1c8c3",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#11110f",
+                    "on-primary-fixed-variant": "#2a4d41"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "section-padding": "120px",
+                    "gutter": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "body-md": ["Montserrat"],
+                    "display-lg": ["Playfair Display"],
+                    "label-caps": ["Montserrat"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .luxury-gradient {
+            background: linear-gradient(180deg, rgba(0,21,14,0.7) 0%, rgba(0,21,14,0.3) 100%);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px 0 rgba(119, 90, 25, 0.15);
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .whatsapp-pulse {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(37, 211, 102, 0.3);
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse 2s infinite ease-out;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
+    </style>
 </head>
-<body>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
 
-    <!-- Header Navigation -->
-    <header class="site-header" id="main-header">
-        <div class="container header-container">
-            <a href="#" class="logo-link" id="header-logo-lnk" aria-label="Ótica Plena Home">
-                <img src="assets/logo - otica plena.png" alt="Ótica Plena Logo" class="site-logo" id="img-logo">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30">
+    <div class="flex justify-between items-center px-margin-mobile md:px-section-padding py-4 max-w-container-max mx-auto">
+        <div class="font-headline-md text-headline-md font-bold text-primary">Ótica Plena</div>
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex gap-8 items-center">
+            <a class="text-primary border-b-2 border-secondary font-semibold font-body-md text-body-md py-1" href="#hero">Início</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#products">Coleções</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#technology">Lentes</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#location">Localização</a>
+        </div>
+        <a href="https://wa.me/5574999572885" target="_blank" class="bg-primary text-on-primary px-6 py-3 font-label-caps text-label-caps uppercase tracking-widest scale-95 active:scale-90 transition-transform">
+            Agendar Exame
+        </a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img alt="Interior luxuoso da Ótica Plena" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBbA-LUR3hDGUQ5qqC1KelXN3U6pTPSagIGYTzT-sC-oZt7bzdIL-bm95wcmUeMqcSES09kCdP0ZL_2wcvfTlom1V85AHo0GEMqTLA4azfn2w63fGv7GBBnWjKk5edTEKUp1pwl9OIxrzwCp7GroI0XE3tSwAwWJ3OeFySiypaFt8sqm2AJb1nlYMXpgeI9Iz_fRyJLz2nBQAb1EOTziZy1bsNNn7KBb8d_tO7H2WY00hpABZ7qHcroklLXh93JJyoyQwReWBuxA"/>
+        <div class="absolute inset-0 luxury-gradient"></div>
+    </div>
+    <div class="relative z-10 text-center px-margin-mobile max-w-4xl">
+        <span class="inline-block mb-6 font-label-caps text-label-caps text-secondary-fixed tracking-[0.3em] uppercase opacity-0 animate-[fadeIn_1s_ease-out_forwards]">Experiência Premium</span>
+        <h1 class="font-display-lg text-display-lg text-on-primary mb-8 leading-tight opacity-0 animate-[fadeIn_1s_ease-out_0.3s_forwards]">Veja o Mundo com Elegância e Precisão</h1>
+        <p class="font-body-lg text-body-lg text-on-primary/80 mb-10 max-w-2xl mx-auto opacity-0 animate-[fadeIn_1s_ease-out_0.6s_forwards]">
+            Unimos a mais alta tecnologia oftalmológica ao design das armações mais exclusivas do mundo.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center opacity-0 animate-[fadeIn_1s_ease-out_0.9s_forwards]">
+            <a href="https://wa.me/5574999572885" target="_blank" class="bg-on-primary text-primary px-10 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary-fixed transition-colors duration-300 text-center">
+                Agendar Consulta
             </a>
-            
-            <nav class="nav-menu" id="navigation-bar" aria-label="Menu principal">
-                <ul>
-                    <li><a href="#hero" class="nav-link active" id="nav-lnk-inicio">Início</a></li>
-                    <li><a href="#differentials" class="nav-link" id="nav-lnk-diferenciais">Diferenciais</a></li>
-                    <li><a href="#products" class="nav-link" id="nav-lnk-produtos">Coleções</a></li>
-                    <li><a href="#technology" class="nav-link" id="nav-lnk-tecnologia">Lentes</a></li>
-                    <li><a href="#testimonials" class="nav-link" id="nav-lnk-depoimentos">Depoimentos</a></li>
-                    <li><a href="#location" class="nav-link" id="nav-lnk-localizacao">Contato</a></li>
-                </ul>
-            </nav>
-            
-            <div class="header-cta">
-                <a href="https://wa.me/5574999572885?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20exame%20ou%20conhecer%20as%20arma%C3%A7%C3%B5es%20da%20%C3%93tica%20Plena." 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="btn btn-primary btn-nav" 
-                   id="header-cta-whatsapp-btn"
-                   aria-label="Fale Conosco pelo WhatsApp">
-                   Falar com Consultor
+            <a href="#products" class="border border-on-primary/30 text-on-primary px-10 py-5 font-label-caps text-label-caps uppercase tracking-widest backdrop-blur-sm hover:bg-on-primary/10 transition-colors duration-300 text-center">
+                Conhecer Coleções
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Diferenciais Section -->
+<section id="differentials" class="py-section-padding px-margin-mobile md:px-section-padding max-w-container-max mx-auto overflow-hidden">
+    <div class="text-center mb-16 scroll-reveal">
+        <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Nossa Essência</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">Onde o cuidado clínico encontra o requinte estético para transformar sua visão.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <!-- Card 1 -->
+        <div class="bg-surface-container-low p-10 flex flex-col items-center text-center glow-hover transition-all duration-500 border border-outline-variant/20 scroll-reveal">
+            <div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center text-secondary-fixed mb-8">
+                <span class="material-symbols-outlined text-3xl">biotech</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-4">Exames Avançados</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Diagnóstico preciso através de equipamentos de última geração e precisão digital absoluta.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-primary text-on-primary p-10 flex flex-col items-center text-center glow-hover transition-all duration-500 scroll-reveal">
+            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center text-on-secondary mb-8">
+                <span class="material-symbols-outlined text-3xl">diamond</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md mb-4 text-on-primary">Armações Exclusivas</h3>
+            <p class="font-body-md text-body-md text-on-primary/70">Curadoria selecionada das marcas de luxo mais renomadas e designers independentes.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-surface-container-low p-10 flex flex-col items-center text-center glow-hover transition-all duration-500 border border-outline-variant/20 scroll-reveal">
+            <div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center text-secondary-fixed mb-8">
+                <span class="material-symbols-outlined text-3xl">face_6</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-4">Atendimento Premium</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Consultoria de visagismo personalizada para encontrar a armação que melhor expressa sua identidade.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Coleções em Destaque Section -->
+<section id="products" class="bg-surface-container-highest py-section-padding">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-section-padding">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 scroll-reveal">
+            <div class="max-w-2xl">
+                <span class="font-label-caps text-label-caps text-secondary uppercase mb-4 block">Curadoria 2024</span>
+                <h2 class="font-headline-lg text-headline-lg text-primary">Coleções em Destaque</h2>
+            </div>
+            <a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:text-secondary hover:border-secondary transition-all" href="https://wa.me/5574999572885" target="_blank">Ver catálogo completo</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="relative group overflow-hidden scroll-reveal">
+                <img alt="Coleção Esmeralda de Óculos" class="w-full aspect-[4/5] object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2Dhvg47KmD8lVeNYrsXXHtxSzZxfMr_ScoYkKhaP4knRRIPbbsSi5mS7ZrOqjuZdX2w2mRI5wkNwi2FZTY_rSy62AZgpRwx-OWsAzj5KYF_kwM-8OMCyR4B17nMCRbCs8cyrPHBu_5IjVNo37S0IJi9BJVqj86uCG-wfWQ88_Y0rkmuE1g6lnCNZ0-U8Z5f2LBGt2jNVLokUKKsPwKB7KMrfgKgH7luvmLzXlNZAn6vxtPi7ZijLrJOTVbH1lRj__ZBEyRGgZNQ"/>
+                <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-primary/80 to-transparent">
+                    <h4 class="font-headline-md text-headline-md text-on-primary">Emerald Essence</h4>
+                    <p class="text-on-primary/80 font-body-md">Sutileza e sofisticação em tons de verde.</p>
+                </div>
+            </div>
+            <div class="space-y-12 scroll-reveal">
+                <div class="border-l-4 border-secondary pl-8 py-4">
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4 italic">Design & Ergonomia</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Cada peça é selecionada não apenas pela estética, mas pelo conforto prolongado e durabilidade dos materiais nobres como titânio e acetato italiano.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="aspect-square bg-surface-container-low flex flex-col items-center justify-center p-6 border border-outline-variant/30 text-center">
+                        <span class="font-display-lg text-secondary text-4xl mb-2">360°</span>
+                        <p class="font-label-caps text-label-caps">Giro de Visualização</p>
+                        <span class="material-symbols-outlined mt-4 text-secondary">rotate_right</span>
+                    </div>
+                    <div class="aspect-square bg-primary flex flex-col items-center justify-center p-6 text-on-primary text-center">
+                        <span class="material-symbols-outlined text-4xl mb-2" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        <p class="font-label-caps text-label-caps">Garantia Vitalícia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tecnologia / Lentes Section -->
+<section id="technology" class="py-section-padding bg-surface">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-section-padding">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1 scroll-reveal">
+                <span class="font-label-caps text-label-caps text-secondary uppercase mb-4 block">Alta Precisão</span>
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-8">Tecnologia em Cada Camada</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </div>
+                        <div>
+                            <h4 class="font-body-lg font-bold text-primary mb-2">Tratamentos Premium</h4>
+                            <p class="text-on-surface-variant">Lentes com tecnologia Zeiss e Essilor, oferecendo o máximo em nitidez e proteção UV.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">light_mode</span>
+                        </div>
+                        <div>
+                            <h4 class="font-body-lg font-bold text-primary mb-2">Filtro de Luz Azul</h4>
+                            <p class="text-on-surface-variant">Proteção essencial para a era digital, reduzindo a fadiga ocular causada por telas.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">flare</span>
+                        </div>
+                        <div>
+                            <h4 class="font-body-lg font-bold text-primary mb-2">Anti-Reflexo Avançado</h4>
+                            <p class="text-on-surface-variant">Visão cristalina em qualquer condição de iluminação, eliminando reflexos indesejados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 scroll-reveal">
+                <div class="relative p-12 bg-surface-container-low rounded-[2rem] overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-primary-fixed/20 rounded-full blur-3xl -mr-32 -mt-32"></div>
+                    <img alt="Lente Tecnológica" class="relative z-10 w-full drop-shadow-2xl" src="assets/glasses.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="bg-surface-container-low py-section-padding">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-section-padding">
+        <h2 class="font-headline-lg text-headline-lg text-primary text-center mb-16 scroll-reveal">O que dizem nossos clientes</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <!-- Testimonial 1 -->
+            <div class="bg-surface p-10 border border-outline-variant/10 shadow-sm scroll-reveal glow-hover transition-all">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center overflow-hidden">
+                        <img alt="Cliente" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy52byX72i6bzQUEqND8O8pYMGWbiV-QLIzse6HQmhMe5BpqMqULzFRDPUdrvRVCus3zP3iSnvRTs36I-I6tYEQ6xvLieCElIS3LMj3oSoL_E0Z8M1Qm3Qkd-7pwyGZ4BET8QVJx-Hs1Q-Ko9V_IVfC3EO-VGjTmQ8W9aZGmHbbd266UssYj31eNBGRV-R8RALfktm2BwvlIZ9Kag1mS2x0ocKpdHCD8Y20swoFj6J-HFpsoy6rHrtVFKrz7Ika1o_adKp9VTf6A"/>
+                    </div>
+                    <div>
+                        <p class="font-body-md font-bold text-primary">Helena Martins</p>
+                        <div class="flex text-secondary-fixed text-sm">
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="font-body-md text-on-surface-variant italic">"O atendimento é impecável. O visagista me ajudou a escolher uma armação que realmente combinava com meu rosto. Nunca recebi tantos elogios."</p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="bg-surface p-10 border border-outline-variant/10 shadow-sm scroll-reveal glow-hover transition-all">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center overflow-hidden">
+                        <img alt="Cliente" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrrvUtLFPjYe5lHme3LUMztPMacwZAO-ZwNtVqdoU4ryMTNrhdRyerNhNRxmeneXJ9DakO95v-vg9_ncu4yQcXw_ITWdmnee_AlajGEZwhvkGRazR-oaxG0RrwEvhuNgRJzsMBMkq5vq1HAiQZTTL3xJ-iudAUFANo8R9Aoi1RZ6u1UIMEN71IZU-Nny4seYdNW_9Embmj122MDiBGjoRHgv_bKe7sXyur16VDH4_QRvspVEm-x3zbdHBgHjVEpaVOUjmpfjVZiQ"/>
+                    </div>
+                    <div>
+                        <p class="font-body-md font-bold text-primary">Ricardo Silva</p>
+                        <div class="flex text-secondary-fixed text-sm">
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="font-body-md text-on-surface-variant italic">"A precisão do exame digital foi o diferencial. Enxergo com muito mais nitidez agora. A Ótica Plena é sinônimo de excelência."</p>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="bg-surface p-10 border border-outline-variant/10 shadow-sm scroll-reveal glow-hover transition-all">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center overflow-hidden">
+                        <img alt="Cliente" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQZdAnsWIv1Tx9Q2GJOA0zNCj7UAIdVn8SRlIkzKbJ8a7404Lrgb6Tczw-WItF_tyEBgR0YVTDBGb_-ewEiChAzKjOxsqckknUUGc8Xje6b9WRJ6bfz3CjPSfd72FkGCQJxQEsZNcZnpYEkZrojCGn3_jFnc85m4sFTG63GWTIBGIgZfAATHSsqONrQBYrq6bR_mQkNIL07asfeTe_97V0krt8lHix5bQBk4QMVdRNbC_9ktVPhhPdZ2Z8kWEe555DSz7uTfIdpg"/>
+                    </div>
+                    <div>
+                        <p class="font-body-md font-bold text-primary">Artur Mendonça</p>
+                        <div class="flex text-secondary-fixed text-sm">
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="font-body-md text-on-surface-variant italic">"Encontrei uma armação exclusiva que não achei em nenhum outro lugar. A curadoria deles é realmente de outro nível."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Location Section -->
+<section id="location" class="py-section-padding px-margin-mobile md:px-section-padding max-w-container-max mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div class="scroll-reveal">
+            <span class="font-label-caps text-label-caps text-secondary uppercase mb-4 block">Onde Estamos</span>
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-8">Venha nos Visitar</h2>
+            <div class="space-y-6 mb-10">
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-secondary mt-1">location_on</span>
+                    <p class="text-on-surface-variant">R. Santa Izabel, 22 - Oliveira<br/>Capim Grosso - BA, 44695-000</p>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-secondary mt-1">schedule</span>
+                    <p class="text-on-surface-variant">Segunda a Sexta: 08:00 às 18:00<br/>Sábado: 08:00 às 12:00</p>
+                </div>
+            </div>
+            <a href="https://share.google/mfaBLfuOfwxnO4T1w" target="_blank" class="btn bg-primary text-on-primary px-8 py-4 inline-flex items-center gap-3">
+                Abrir no Google Maps
+                <span class="material-symbols-outlined text-sm">open_in_new</span>
+            </a>
+        </div>
+        <div class="scroll-reveal">
+            <div class="aspect-video bg-surface-container-low rounded-3xl overflow-hidden shadow-premium border border-outline-variant/20 relative group">
+                <div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors"></div>
+                <!-- Visual placeholder for map -->
+                <div class="w-full h-full flex items-center justify-center">
+                    <div class="text-center">
+                        <span class="material-symbols-outlined text-6xl text-secondary mb-4">map</span>
+                        <p class="font-label-caps text-label-caps text-primary">Mapa Interativo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Component -->
+<footer class="w-full pt-section-padding pb-8 bg-surface-container-lowest border-t border-outline-variant">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-section-padding max-w-container-max mx-auto mb-16">
+        <div class="col-span-1 md:col-span-2">
+            <div class="font-headline-md text-headline-md text-primary mb-6">Ótica Plena</div>
+            <p class="text-on-surface-variant mb-8 max-w-sm">Elevando sua visão ao nível da arte. Visite-nos e descubra como a clareza encontra o estilo.</p>
+            <div class="flex gap-4">
+                <a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container border border-outline-variant hover:bg-primary hover:text-on-primary transition-all" href="https://www.instagram.com/oticaplena.cg/" target="_blank">
+                    <span class="material-symbols-outlined">photo_camera</span>
+                </a>
+                <a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container border border-outline-variant hover:bg-primary hover:text-on-primary transition-all" href="https://wa.me/5574999572885" target="_blank">
+                    <span class="material-symbols-outlined">chat</span>
                 </a>
             </div>
-
-            <button class="mobile-menu-toggle" id="menu-toggle-btn" aria-label="Abrir Menu" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
         </div>
-    </header>
-
-    <main>
-        
-        <!-- Hero Section -->
-        <section class="hero-section" id="hero">
-            <div class="hero-bg-glow"></div>
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <span class="hero-tagline animate-on-scroll">Estilo, Conforto & Clareza Visual</span>
-                    <h1 class="hero-title animate-on-scroll">
-                        Veja o mundo com a nitidez e a elegância da <span class="text-gold">Ótica Plena</span>
-                    </h1>
-                    <p class="hero-description animate-on-scroll">
-                        Combinamos tecnologia ótica de ponta com armações exclusivas que expressam sua personalidade. Cuide da saúde dos seus olhos com quem entende de verdade.
-                    </p>
-                    <div class="hero-actions animate-on-scroll">
-                        <a href="https://wa.me/5574999572885?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20arma%C3%A7%C3%B5es%20e%20lentes." 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="btn btn-primary btn-large btn-glow" 
-                           id="hero-cta-whatsapp-main"
-                           aria-label="Ver Modelos no WhatsApp">
-                            Conhecer Nossas Armações
-                        </a>
-                        <a href="#differentials" class="btn btn-secondary btn-large" id="hero-secondary-btn">
-                            Nossos Diferenciais
-                        </a>
-                    </div>
-                    
-                    <div class="hero-stats animate-on-scroll">
-                        <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Garantia de Adaptação</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">+1000</span>
-                            <span class="stat-label">Clientes Satisfeitos</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">BA</span>
-                            <span class="stat-label">Capim Grosso</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="hero-media animate-on-scroll">
-                    <!-- Glow background blobs -->
-                    <div class="media-glow-blob"></div>
-                    
-                    <!-- Lifestyle image card (Mother and Daughter) -->
-                    <div class="lifestyle-card-wrapper">
-                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=800&auto=format&fit=crop" alt="Mãe e filha usando óculos na Ótica Plena" class="lifestyle-img">
-                        <div class="lifestyle-card-glow"></div>
-                    </div>
-                    
-                    <!-- 3D Rotating Glasses floating in front -->
-                    <div class="glasses-3d-wrapper" id="glasses-3d-container">
-                        <div class="glasses-3d-inner" id="glasses-card">
-                            <img src="assets/glasses.png" alt="Óculos Premium de Luxo Ótica Plena" class="hero-glasses-img" id="glasses-3d-img">
-                            <div class="shadow-ring"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="floating-badge" id="hero-floating-badge">
-                        <div class="badge-icon">✨</div>
-                        <div class="badge-text">
-                            <strong>Giro 360°</strong>
-                            <span>Passe o mouse no óculos</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Brand Differentials Section -->
-        <section class="differentials-section" id="differentials">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-subtitle">Por Que Escolher a Ótica Plena?</span>
-                    <h2 class="section-title">O padrão de excelência para seus olhos</h2>
-                    <div class="divider-gold"></div>
-                </div>
-                
-                <div class="differentials-grid">
-                    <div class="diff-card animate-on-scroll" id="diff-card-1">
-                        <div class="diff-icon-wrapper">
-                            <!-- SVG Eye Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="diff-icon"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                        </div>
-                        <h3 class="diff-title">Exames Avançados</h3>
-                        <p class="diff-description">Realizamos avaliação computadorizada precisa com os equipamentos mais modernos do mercado.</p>
-                    </div>
-                    
-                    <div class="diff-card animate-on-scroll" id="diff-card-2">
-                        <div class="diff-icon-wrapper">
-                            <!-- SVG Award Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="diff-icon"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"/><path d="M12 2a4 4 0 0 0-4 4v8a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4Z"/></svg>
-                        </div>
-                        <h3 class="diff-title">Armações Premium</h3>
-                        <p class="diff-description">Marcas exclusivas nacionais e importadas selecionadas com foco em design, ergonomia e durabilidade.</p>
-                    </div>
-                    
-                    <div class="diff-card animate-on-scroll" id="diff-card-3">
-                        <div class="diff-icon-wrapper">
-                            <!-- SVG Sparkles Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="diff-icon"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
-                        </div>
-                        <h3 class="diff-title">Lentes Tecnológicas</h3>
-                        <p class="diff-description">Lentes personalizadas de alta tecnologia, filtro de luz azul, anti-reflexo, fotocromáticas e muito mais.</p>
-                    </div>
-                    
-                    <div class="diff-card animate-on-scroll" id="diff-card-4">
-                        <div class="diff-icon-wrapper">
-                            <!-- SVG Heart Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="diff-icon"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-                        </div>
-                        <h3 class="diff-title">Atendimento Humanizado</h3>
-                        <p class="diff-description">Nossa equipe de consultores oferece assessoria estética completa para encontrar o óculos ideal para seu rosto.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Continuous Right-Sliding Carousel Section -->
-        <section class="carousel-section" id="products">
-            <div class="section-header text-center">
-                <span class="section-subtitle">Nossas Coleções</span>
-                <h2 class="section-title">Encontre os óculos perfeitos para você</h2>
-                <div class="divider-gold"></div>
-            </div>
-            
-            <!-- Infinite Right Sliding Carousel Container -->
-            <div class="carousel-outer-wrapper">
-                <div class="carousel-track" id="product-carousel-track">
-                    
-                    <!-- Slide 1 -->
-                    <div class="carousel-item">
-                        <div class="product-card">
-                            <div class="product-img-wrapper">
-                                <img src="assets/sunglasses.png" alt="Coleção Óculos de Sol Premium" class="product-img">
-                                <span class="product-badge">Novidade</span>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-category">Óculos de Sol</h3>
-                                <h4 class="product-name">Coleção Solar Elegance</h4>
-                                <p class="product-desc">Proteção UV400 com estilo incomparável e lentes polarizadas.</p>
-                                <a href="https://wa.me/5574999572885?text=Ol%C3%A1!%20Gostaria%20de%20ver%20modelos%20de%20%C3%B3culos%20de%20sol%20dispon%C3%ADveis." 
-                                   target="_blank" 
-                                   rel="noopener noreferrer" 
-                                   class="product-link" 
-                                   id="pcard-sol-lnk">
-                                    Ver no WhatsApp &rarr;
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 2 -->
-                    <div class="carousel-item">
-                        <div class="product-card">
-                            <div class="product-img-wrapper">
-                                <img src="assets/prescription_glasses.png" alt="Coleção Óculos de Grau" class="product-img">
-                                <span class="product-badge">Exclusivo</span>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-category">Óculos de Grau</h3>
-                                <h4 class="product-name">Classic & Modern Frames</h4>
-                                <p class="product-desc">Armações super leves e confortáveis em acetato e titânio.</p>
-                                <a href="https://wa.me/5574999572885?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20os%20modelos%20de%20arma%C3%A7%C3%B5es%20de%20grau." 
-                                   target="_blank" 
-                                   rel="noopener noreferrer" 
-                                   class="product-link" 
-                                   id="pcard-grau-lnk">
-                                    Ver no WhatsApp &rarr;
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 3 -->
-                    <div class="carousel-item">
-                        <div class="product-card">
-                            <div class="product-img-wrapper">
-                                <img src="assets/contact_lenses.png" alt="Lentes de Contato de Alta Tecnologia" class="product-img">
-                                <span class="product-badge">Tecnologia</span>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-category">Lentes de Contato</h3>
-                                <h4 class="product-name">Comfort Touch Lenses</h4>
-                                <p class="product-desc">Hidratação prolongada e alto fluxo de oxigênio para seus olhos.</p>
-                                <a href="https://wa.me/5574999572885?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20lentes%20de%20contato%20e%20valores." 
-                                   target="_blank" 
-                                   rel="noopener noreferrer" 
-                                   class="product-link" 
-                                   id="pcard-lentes-lnk">
-                                    Ver no WhatsApp &rarr;
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 4 (Custom design sunglasses variant) -->
-                    <div class="carousel-item">
-                        <div class="product-card">
-                            <div class="product-img-wrapper">
-                                <img src="assets/glasses.png" alt="Coleção Luxo Premium" class="product-img">
-                                <span class="product-badge">Especial</span>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-category">Coleção Luxo</h3>
-                                <h4 class="product-name">Silver & Black Luxury</h4>
-                                <p class="product-desc">Armações de luxo em prata e acetato preto com acabamento feito à mão.</p>
-                                <a href="https://wa.me/5574999572885?text=Ol%C3%A1!%20Gostaria%20de%20ver%20a%20cole%C3%A7%C3%A3o%20premium%20de%20luxo." 
-                                   target="_blank" 
-                                   rel="noopener noreferrer" 
-                                   class="product-link" 
-                                   id="pcard-luxo-lnk">
-                                    Ver no WhatsApp &rarr;
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- DUPLICATED ITEMS (for seamless infinite loop sliding right) -->
-                    
-                    <!-- Slide 1 Dup -->
-                    <div class="carousel-item" aria-hidden="true">
-                        <div class="product-card">
-                            <div class="product-img-wrapper">
-                                <img src="assets/sunglasses.png" alt="Coleção Óculos de Sol Premium" class="product-img">
-                                <span class="product-badge">Novidade</span>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-category">Óculos de Sol</h3>
-                                <h4 class="product-name">Coleção Solar Elegance</h4>
-                                <p class="product-desc">Proteção UV400 com estilo incomparável e lentes polarizadas.</p>
-                                <a href="https://wa.me/5574999572885?text=Ol%C3%A1!%20Gostaria%20de%20ver%20modelos%20de%20%C3%B3culos%20de%20sol%20dispon%C3%ADveis." 
-                                   target="_blank" 
-                                   rel="noopener noreferrer" 
-                                   class="product-link" 
-                                   id="pcard-sol-lnk-dup">
-                                    Ver no WhatsApp &rarr;
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 2 Dup -->
-                    <div class="carousel-item" aria-hidden="true">
-                        <div class="product-card">
-                            <div class="product-img-wrapper">
-                                <img src="assets/prescription_glasses.png" alt="Coleção Óculos de Grau" class="product-img">
-                                <span class="product-badge">Exclusivo</span>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-category">Óculos de Grau</h3>
-                                <h4 class="product-name">Classic & Modern Frames</h4>
-                                <p class="product-desc">Armações super leves e confortáveis em acetato e titânio.</p>
-                                <a href="https://wa.me/5574999572885?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20os%20modelos%20de%20arma%C3%A7%C3%B5es%20de%20grau." 
-                                   target="_blank" 
-                                   rel="noopener noreferrer" 
-                                   class="product-link" 
-                                   id="pcard-grau-lnk-dup">
-                                    Ver no WhatsApp &rarr;
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 3 Dup -->
-                    <div class="carousel-item" aria-hidden="true">
-                        <div class="product-card">
-                            <div class="product-img-wrapper">
-                                <img src="assets/contact_lenses.png" alt="Lentes de Contato de Alta Tecnologia" class="product-img">
-                                <span class="product-badge">Tecnologia</span>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-category">Lentes de Contato</h3>
-                                <h4 class="product-name">Comfort Touch Lenses</h4>
-                                <p class="product-desc">Hidratação prolongada e alto fluxo de oxigênio para seus olhos.</p>
-                                <a href="https://wa.me/5574999572885?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20lentes%20de%20contato%20e%20valores." 
-                                   target="_blank" 
-                                   rel="noopener noreferrer" 
-                                   class="product-link" 
-                                   id="pcard-lentes-lnk-dup">
-                                    Ver no WhatsApp &rarr;
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 4 Dup -->
-                    <div class="carousel-item" aria-hidden="true">
-                        <div class="product-card">
-                            <div class="product-img-wrapper">
-                                <img src="assets/glasses.png" alt="Coleção Luxo Premium" class="product-img">
-                                <span class="product-badge">Especial</span>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-category">Coleção Luxo</h3>
-                                <h4 class="product-name">Silver & Black Luxury</h4>
-                                <p class="product-desc">Armações de luxo em prata e acetato preto com acabamento feito à mão.</p>
-                                <a href="https://wa.me/5574999572885?text=Ol%C3%A1!%20Gostaria%20de%20ver%20a%20cole%C3%A7%C3%A3o%20premium%20de%20luxo." 
-                                   target="_blank" 
-                                   rel="noopener noreferrer" 
-                                   class="product-link" 
-                                   id="pcard-luxo-lnk-dup">
-                                    Ver no WhatsApp &rarr;
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Technology & Customized Lenses Section -->
-        <section class="technology-section" id="technology">
-            <div class="container technology-container">
-                <div class="tech-media animate-on-scroll">
-                    <!-- High-tech glasses with blue light representation -->
-                    <div class="tech-image-container">
-                        <img src="assets/glasses.png" alt="Lente Tecnológica com Proteção UV" class="tech-img">
-                        <div class="lens-glow-effect"></div>
-                    </div>
-                </div>
-                
-                <div class="tech-content">
-                    <span class="section-subtitle">Alta Tecnologia para Seus Olhos</span>
-                    <h2 class="section-title">Lentes personalizadas de última geração</h2>
-                    <div class="divider-gold"></div>
-                    <p class="tech-intro">
-                        Na Ótica Plena, a precisão visual é levada a sério. Trabalhamos em parceria com os melhores laboratórios ópticos globais para oferecer tratamentos sob medida.
-                    </p>
-                    
-                    <ul class="tech-features">
-                        <li>
-                            <span class="feature-bullet">✓</span>
-                            <div class="feature-text">
-                                <strong>Filtro de Luz Azul:</strong> Proteção essencial contra a fadiga ocular causada por telas de celulares, tablets e computadores.
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature-bullet">✓</span>
-                            <div class="feature-text">
-                                <strong>Tratamento Anti-Reflexo:</strong> Nitidez cristalina ao dirigir à noite e em ambientes muito iluminados.
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature-bullet">✓</span>
-                            <div class="feature-text">
-                                <strong>Tecnologia Fotocromática:</strong> Lentes que se adaptam rapidamente à luz solar, escurecendo ao ar livre e clareando em ambientes internos.
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature-bullet">✓</span>
-                            <div class="feature-text">
-                                <strong>Tratamento Hidrofóbico & Anti-risco:</strong> Mais facilidade de limpeza e alta resistência contra riscos acidentais.
-                            </div>
-                        </li>
-                    </ul>
-                    
-                    <a href="https://wa.me/5574999572885?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20exame%20de%20vista." 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="btn btn-primary" 
-                       id="tech-cta-btn"
-                       aria-label="Agendar Exame de Vista no WhatsApp">
-                        Agendar Exame de Vista
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials (Social Proof) Section -->
-        <section class="testimonials-section" id="testimonials">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-subtitle">Depoimentos dos Clientes</span>
-                    <h2 class="section-title">O que dizem sobre nós</h2>
-                    <div class="divider-gold"></div>
-                </div>
-                
-                <div class="testimonials-grid">
-                    <!-- Testimonial 1 -->
-                    <div class="testimonial-card animate-on-scroll" id="testi-card-1">
-                        <div class="stars">★★★★★</div>
-                        <p class="testimonial-text">
-                            "Fui muito bem atendida na Ótica Plena. A equipe me ajudou a escolher uma armação que super valorizou o meu rosto e as lentes multifocais ficaram perfeitas, a adaptação foi no mesmo dia!"
-                        </p>
-                        <div class="client-info">
-                            <div class="client-avatar">M</div>
-                            <div>
-                                <h4 class="client-name">Maria Auxiliadora</h4>
-                                <span class="client-location">Capim Grosso - BA</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonial 2 -->
-                    <div class="testimonial-card animate-on-scroll" id="testi-card-2">
-                        <div class="stars">★★★★★</div>
-                        <p class="testimonial-text">
-                            "Equipamentos modernos para o exame de vista e excelentes opções de marcas. O diferencial deles é realmente o atendimento e a atenção que dão para o cliente no pós-venda."
-                        </p>
-                        <div class="client-info">
-                            <div class="client-avatar">J</div>
-                            <div>
-                                <h4 class="client-name">João Marcos Santos</h4>
-                                <span class="client-location">Capim Grosso - BA</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonial 3 -->
-                    <div class="testimonial-card animate-on-scroll" id="testi-card-3">
-                        <div class="stars">★★★★★</div>
-                        <p class="testimonial-text">
-                            "Ótica excelente! Comprei meu óculos de sol polarizado e o preço foi muito justo. A qualidade é impressionante e as atendentes são super simpáticas. Recomendo muito!"
-                        </p>
-                        <div class="client-info">
-                            <div class="client-avatar">A</div>
-                            <div>
-                                <h4 class="client-name">Ana Beatriz Lima</h4>
-                                <span class="client-location">Capim Grosso - BA</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Location, Hours & Map Section -->
-        <section class="location-section" id="location">
-            <div class="container location-container">
-                <div class="location-info animate-on-scroll">
-                    <span class="section-subtitle">Onde Nos Encontrar</span>
-                    <h2 class="section-title">Venha fazer uma visita</h2>
-                    <div class="divider-gold"></div>
-                    
-                    <div class="info-list">
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="12" r="3"/></svg>
-                            </div>
-                            <div class="info-text">
-                                <h3>Endereço</h3>
-                                <p>R. Santa Izabel, 22 - Oliveira, Capim Grosso - BA, 44695-000</p>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="15" x="2" y="7" rx="2" ry="2"/><path d="M17 2h.01"/><path d="M12 2h.01"/><path d="M7 2h.01"/><path d="M3 7v10h18V7H3Z"/></svg>
-                            </div>
-                            <div class="info-text">
-                                <h3>Horário de Funcionamento</h3>
-                                <p>Segunda a Sexta: 08:00 às 18:00<br>Sábado: 08:00 às 12:00</p>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-                            </div>
-                            <div class="info-text">
-                                <h3>WhatsApp / Atendimento</h3>
-                                <p>+55 74 99957-2885</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="location-actions">
-                        <a href="https://share.google/mfaBLfuOfwxnO4T1w" 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="btn btn-primary" 
-                           id="loc-map-btn"
-                           aria-label="Abrir localização no Google Maps">
-                            Como Chegar (Google Maps)
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="location-map animate-on-scroll">
-                    <!-- Beautiful CSS styled interactive card mimicking a premium map graphic, with button to open real navigation -->
-                    <div class="map-card">
-                        <div class="map-visual">
-                            <div class="map-grid-overlay"></div>
-                            <div class="pulse-pin">
-                                <div class="pin"></div>
-                                <div class="pulse"></div>
-                            </div>
-                            <div class="map-label">Ótica Plena</div>
-                            <div class="map-address-overlay">Rua Santa Izabel, 22</div>
-                        </div>
-                        <div class="map-card-footer">
-                            <p>Clique abaixo para rotas em tempo real via satélite</p>
-                            <a href="https://share.google/mfaBLfuOfwxnO4T1w" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full" id="map-inner-lnk">
-                                Abrir GPS Integrado
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer" id="footer-section">
-        <div class="container footer-grid">
-            <div class="footer-col brand-col">
-                <a href="#" class="footer-logo-link" id="footer-logo-lnk" aria-label="Ótica Plena Home">
-                    <img src="assets/logo - otica plena.png" alt="Ótica Plena Logo" class="footer-logo">
-                </a>
-                <p class="brand-tagline">
-                    Oferecendo excelência visual, sofisticação e estilo para Capim Grosso e região.
-                </p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/oticaplena.cg/" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="social-icon" 
-                       id="footer-insta-lnk" 
-                       aria-label="Siga-nos no Instagram">
-                        <!-- Instagram Icon SVG -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                    </a>
-                    <a href="https://share.google/mfaBLfuOfwxnO4T1w" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="social-icon" 
-                       id="footer-google-lnk" 
-                       aria-label="Perfil da Empresa no Google">
-                        <!-- Google Icon/Map Pin SVG -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="3"/></svg>
-                    </a>
-                    <a href="https://wa.me/5574999572885" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="social-icon" 
-                       id="footer-whatsapp-lnk" 
-                       aria-label="Fale conosco no WhatsApp">
-                        <!-- WhatsApp Icon SVG -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="footer-col links-col">
-                <h3 class="footer-title">Links Rápidos</h3>
-                <ul class="footer-links">
-                    <li><a href="#hero" id="fl-lnk-inicio">Início</a></li>
-                    <li><a href="#differentials" id="fl-lnk-diferenciais">Diferenciais</a></li>
-                    <li><a href="#products" id="fl-lnk-produtos">Coleções</a></li>
-                    <li><a href="#technology" id="fl-lnk-tecnologia">Lentes</a></li>
-                    <li><a href="#testimonials" id="fl-lnk-depoimentos">Depoimentos</a></li>
-                    <li><a href="#location" id="fl-lnk-localizacao">Onde Estamos</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col contact-col">
-                <h3 class="footer-title">Contato</h3>
-                <ul class="footer-contact-info">
-                    <li>
-                        <span class="icon">📍</span>
-                        <span class="text">R. Santa Izabel, 22 - Oliveira, Capim Grosso - BA, 44695-000</span>
-                    </li>
-                    <li>
-                        <span class="icon">📞</span>
-                        <span class="text">+55 74 99957-2885</span>
-                    </li>
-                    <li>
-                        <span class="icon">✉️</span>
-                        <span class="text">contato@oticaplena.com.br</span>
-                    </li>
-                </ul>
-            </div>
+        <div>
+            <h4 class="font-label-caps text-label-caps text-primary uppercase mb-6">Navegação</h4>
+            <ul class="space-y-4 text-on-surface-variant font-body-md">
+                <li><a href="#hero" class="hover:text-primary transition-colors">Início</a></li>
+                <li><a href="#products" class="hover:text-primary transition-colors">Coleções</a></li>
+                <li><a href="#technology" class="hover:text-primary transition-colors">Tecnologia</a></li>
+                <li><a href="#location" class="hover:text-primary transition-colors">Contato</a></li>
+            </ul>
         </div>
-        
-        <div class="footer-bottom">
-            <div class="container footer-bottom-flex">
-                <p>&copy; 2026 Ótica Plena. Todos os direitos reservados.</p>
-                <p>Desenvolvido com sofisticação e precisão.</p>
-            </div>
+        <div>
+            <h4 class="font-label-caps text-label-caps text-primary uppercase mb-6">Contato</h4>
+            <ul class="space-y-4 text-on-surface-variant font-body-md">
+                <li>contato@oticaplena.com.br</li>
+                <li>+55 74 99957-2885</li>
+            </ul>
         </div>
-    </footer>
+    </div>
+    <div class="border-t border-outline-variant/30 pt-8 text-center px-margin-mobile">
+        <p class="text-on-surface-variant text-sm">© 2026 Ótica Plena. Todos os direitos reservados. Excelência e precisão em saúde visual.</p>
+    </div>
+</footer>
 
-    <!-- Floating Dynamic WhatsApp Button -->
-    <a href="https://wa.me/5574999572885?text=Ol%C3%A1!%20Visitei%20o%20site%20e%20gostaria%20de%20conversar%20com%20um%20consultor%20da%20%C3%93tica%20Plena." 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       class="floating-whatsapp-btn animate-bounce" 
-       id="floating-whatsapp-trigger" 
-       aria-label="Fale com a Ótica Plena no WhatsApp">
-        <!-- Pulse ring effect -->
-        <span class="whatsapp-pulse"></span>
-        <!-- SVG WhatsApp Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="whatsapp-icon"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-    </a>
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/5574999572885" target="_blank" class="fixed bottom-8 right-8 z-[100] w-16 h-16 bg-[#25d366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+    <div class="whatsapp-pulse"></div>
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+</a>
 
-    <!-- Custom Script JS -->
-    <script src="script.js"></script>
+<!-- Scripts -->
+<script>
+    // Scroll Reveal Logic
+    const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    };
+
+    const revealObserver = new IntersectionObserver(revealCallback, {
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // Smooth Scroll for Internal Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
