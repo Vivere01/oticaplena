@@ -176,8 +176,8 @@
             <!-- Left: Text Content -->
             <div class="animate-[fadeIn_1s_ease-out_forwards]">
                 <span class="inline-block mb-6 font-label-caps text-label-caps text-primary-fixed tracking-[0.3em] uppercase">Experiência Premium</span>
-                <h1 class="font-display-lg text-display-lg text-on-primary mb-8 leading-tight">
-                    Veja o Mundo com <br/> <span class="text-primary bg-primary-fixed px-2">Elegância</span> e Precisão
+                <h1 id="typewriter-headline" class="font-display-lg text-display-lg text-on-primary mb-8 leading-tight min-h-[150px] lg:min-h-[216px]">
+                    <!-- Typed content will appear here -->
                 </h1>
                 <p class="font-body-lg text-body-lg text-on-primary/80 mb-10 max-w-xl">
                     Unimos a mais alta tecnologia oftalmológica ao design das armações mais exclusivas do mundo. Sua visão merece o melhor cuidado.
@@ -520,6 +520,39 @@
             }
         });
     });
+
+    // Typewriter Animation Logic
+    const typewriterElement = document.getElementById('typewriter-headline');
+    const fullText = 'Veja o Mundo com <br/> <span class="text-primary bg-primary-fixed px-2">Elegância</span> e Precisão';
+    
+    let currentText = '';
+    let charIndex = 0;
+    let isTag = false;
+
+    function type() {
+        if (charIndex < fullText.length) {
+            const char = fullText[charIndex];
+            
+            if (char === '<') isTag = true;
+            
+            currentText += char;
+            charIndex++;
+
+            if (char === '>') {
+                isTag = false;
+            }
+
+            if (isTag) {
+                type(); // Continue typing tags instantly
+            } else {
+                typewriterElement.innerHTML = currentText;
+                setTimeout(type, 70); // Typing speed
+            }
+        }
+    }
+
+// Start typewriter after a small delay to sync with other animations
+setTimeout(type, 1000);
 </script>
 
 </body>
