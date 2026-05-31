@@ -28,7 +28,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
@@ -120,17 +120,28 @@
                 </div>
                 
                 <div class="hero-media animate-on-scroll">
+                    <!-- Glow background blobs -->
+                    <div class="media-glow-blob"></div>
+                    
+                    <!-- Lifestyle image card (Mother and Daughter) -->
+                    <div class="lifestyle-card-wrapper">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=800&auto=format&fit=crop" alt="Mãe e filha usando óculos na Ótica Plena" class="lifestyle-img">
+                        <div class="lifestyle-card-glow"></div>
+                    </div>
+                    
+                    <!-- 3D Rotating Glasses floating in front -->
                     <div class="glasses-3d-wrapper" id="glasses-3d-container">
                         <div class="glasses-3d-inner" id="glasses-card">
                             <img src="assets/glasses.png" alt="Óculos Premium de Luxo Ótica Plena" class="hero-glasses-img" id="glasses-3d-img">
                             <div class="shadow-ring"></div>
                         </div>
                     </div>
-                    <div class="floating-badge">
+                    
+                    <div class="floating-badge" id="hero-floating-badge">
                         <div class="badge-icon">✨</div>
                         <div class="badge-text">
                             <strong>Giro 360°</strong>
-                            <span>Passe o mouse ou toque</span>
+                            <span>Passe o mouse no óculos</span>
                         </div>
                     </div>
                 </div>
