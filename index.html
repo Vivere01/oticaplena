@@ -163,53 +163,56 @@
 </nav>
 
 <!-- Hero Section -->
-<header id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-surface-bright">
+<header id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-primary-container">
+    <!-- Luxury Gradient Overlay -->
+    <div class="absolute inset-0 luxury-gradient z-0"></div>
+
     <!-- Background Image - Bottom Left -->
-    <img alt="Ambientação Ótica Plena" class="hero-bg-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBbA-LUR3hDGUQ5qqC1KelXN3U6pTPSagIGYTzT-sC-oZt7bzdIL-bm95wcmUeMqcSES09kCdP0ZL_2wcvfTlom1V85AHo0GEMqTLA4azfn2w63fGv7GBBnWjKk5edTEKUp1pwl9OIxrzwCp7GroI0XE3tSwAwWJ3OeFySiypaFt8sqm2AJb1nlYMXpgeI9Iz_fRyJLz2nBQAb1EOTziZy1bsNNn7KBb8d_tO7H2WY00hpABZ7qHcroklLXh93JJyoyQwReWBuxA"/>
+    <img alt="Ambientação Ótica Plena" class="hero-bg-image opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBbA-LUR3hDGUQ5qqC1KelXN3U6pTPSagIGYTzT-sC-oZt7bzdIL-bm95wcmUeMqcSES09kCdP0ZL_2wcvfTlom1V85AHo0GEMqTLA4azfn2w63fGv7GBBnWjKk5edTEKUp1pwl9OIxrzwCp7GroI0XE3tSwAwWJ3OeFySiypaFt8sqm2AJb1nlYMXpgeI9Iz_fRyJLz2nBQAb1EOTziZy1bsNNn7KBb8d_tO7H2WY00hpABZ7qHcroklLXh93JJyoyQwReWBuxA"/>
     
     <div class="container relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-section-padding py-24">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
             <!-- Left: Text Content -->
             <div class="animate-[fadeIn_1s_ease-out_forwards]">
-                <span class="inline-block mb-6 font-label-caps text-label-caps text-secondary tracking-[0.3em] uppercase">Experiência Premium</span>
-                <h1 class="font-display-lg text-display-lg text-primary mb-8 leading-tight">
-                    Veja o Mundo com <br/> <span class="text-secondary-container bg-primary px-2">Elegância</span> e Precisão
+                <span class="inline-block mb-6 font-label-caps text-label-caps text-primary-fixed tracking-[0.3em] uppercase">Experiência Premium</span>
+                <h1 class="font-display-lg text-display-lg text-on-primary mb-8 leading-tight">
+                    Veja o Mundo com <br/> <span class="text-primary bg-primary-fixed px-2">Elegância</span> e Precisão
                 </h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                <p class="font-body-lg text-body-lg text-on-primary/80 mb-10 max-w-xl">
                     Unimos a mais alta tecnologia oftalmológica ao design das armações mais exclusivas do mundo. Sua visão merece o melhor cuidado.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/5574999572885" target="_blank" class="bg-primary text-on-primary px-10 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container transition-all text-center">
+                    <a href="https://wa.me/5574999572885" target="_blank" class="bg-on-primary text-primary px-10 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-fixed transition-all text-center">
                         Agendar Consulta
                     </a>
-                    <a href="#products" class="border border-primary/20 text-primary px-10 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary/5 transition-all text-center">
+                    <a href="#products" class="border border-on-primary/30 text-on-primary px-10 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-on-primary/10 transition-all text-center">
                         Coleções
                     </a>
                 </div>
                 
                 <!-- Simple Stats -->
-                <div class="mt-12 flex gap-8 border-t border-outline-variant/30 pt-8">
+                <div class="mt-12 flex gap-8 border-t border-on-primary/10 pt-8">
                     <div>
-                        <p class="text-2xl font-bold text-primary">+1000</p>
-                        <p class="text-xs uppercase tracking-tighter text-on-surface-variant">Clientes</p>
+                        <p class="text-2xl font-bold text-on-primary">+1000</p>
+                        <p class="text-xs uppercase tracking-tighter text-on-primary/60">Clientes</p>
                     </div>
                     <div>
-                        <p class="text-2xl font-bold text-primary">100%</p>
-                        <p class="text-xs uppercase tracking-tighter text-on-surface-variant">Garantia</p>
+                        <p class="text-2xl font-bold text-on-primary">100%</p>
+                        <p class="text-xs uppercase tracking-tighter text-on-primary/60">Garantia</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Right: Rotating Glasses (No background image here as requested) -->
+            <!-- Right: Rotating Glasses -->
             <div class="flex justify-center items-center lg:justify-end animate-[fadeIn_1s_ease-out_0.5s_forwards]">
                 <div class="relative w-full max-w-md aspect-square flex items-center justify-center">
                     <!-- Glow behind glasses -->
-                    <div class="absolute w-64 h-64 bg-primary-fixed/20 rounded-full blur-[100px]"></div>
+                    <div class="absolute w-64 h-64 bg-primary-fixed/10 rounded-full blur-[100px]"></div>
                     
                     <!-- 360 Rotating Glasses -->
                     <div class="animate-rotate-360 perspective-[1000px]">
-                        <img src="assets/glasses.png" alt="Óculos Premium" class="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,21,14,0.3)]"/>
+                        <img src="assets/glasses.png" alt="Óculos Premium" class="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"/>
                     </div>
                 </div>
             </div>
